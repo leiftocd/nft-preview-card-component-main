@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+
+
+:root{
+
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-bg: hsla(178, 69%, 51%, 0.608);
+    
+
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue-main-BG);
+    padding: 5rem 0;
+}
+
+main{
+    width: 34rem;
+    background-color: var(--Very-dark-blue-card-BG);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 3rem 2rem 2rem;
+    border-radius: 1rem;
+    gap: 2rem;
+    box-shadow:  1rem 2rem 3rem 4rem rgba(12, 17, 40, 0.8);
+
+}
+
+.image{
+    min-width: 70%;
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+   
+}
+.image img{
+    width: 30rem;
+    width: 30rem;
+    border-radius: 1rem;
+    z-index: 1;
+    /* display: none; */
+}
+.image:hover > img{
+    z-index: -1;
+}
+.image:hover .active{
+    background-color: rgba(0, 217, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+.active{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.active svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+}
+
+h1{
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+p{
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+.price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-ct{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    letter-spacing: .5px;
+}
+.right-ct{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: 1.4rem;
+}
+.price h2{
+    color: var(--Cyan);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.price p{
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.creator{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-top: .1rem solid var(--Soft-blue);
+    padding: 1.5rem 0 1.2rem 0;
+}
+
+.creator img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--White);
+}
+
+.creator span{
+    color: var(--White);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.creator span:hover,
+h1:hover{
+    color: var(--Cyan);
+}
+
+
+@media (max-width:375px) {
+
+    body{
+        width: 100%;
+        gap: 1rem;
+    }
+
+    main{
+        width: 34rem;
+    }
+}
